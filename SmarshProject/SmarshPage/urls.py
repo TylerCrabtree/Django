@@ -25,4 +25,5 @@ from SmarshPage import views
 
 urlpatterns = [
     url(r'^$', views.HomePageView.as_view()),
+   url(r'^sample/$', views.SamplePageView.as_view()), # Add this /about/ route
 ]
