@@ -1,4 +1,4 @@
-"""SmarshProject URL Configuration
+"""TyProject URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
@@ -19,7 +19,12 @@ from django.urls import path
 from django.conf.urls import url, include
 from django.contrib import admin
 
+from django.conf.urls import url
+from TysPage import views
+
+
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^', include('SmarshPage.urls')),
+    url(r'^$', views.HomePageView.as_view()),
+    url(r'^sample/$', views.SamplePageView.as_view()),
+
 ]
